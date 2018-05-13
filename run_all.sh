@@ -12,7 +12,7 @@ kenlm_bin="../kenlm_bin/kenlm/build/bin"
 deepspeech="../deepspeech"
 
 # Create LM
-./prepare_text.py $text_corpus_path $exp_path/cleaned_vocab.txt
+#./prepare_text.py $text_corpus_path $exp_path/cleaned_vocab.txt
 
 $kenlm_bin/lmplz --text $exp_path/cleaned_vocab.txt --arpa $exp_path/words.arpa --o 3
 $kenlm_bin/build_binary -T -s $exp_path/words.arpa  $exp_path/lm.binary
