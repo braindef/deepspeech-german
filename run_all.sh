@@ -2,14 +2,14 @@
 
 set -xe
 
-tuda_corpus_path="/cluster/data/project_kws/data/tuda"
-voxforge_corpus_path="/cluster/data/project_kws/data/voxforge_de"
-text_corpus_path="/cluster/data/project_kws/data/text_corpora/German_sentences_8mil_filtered_maryfied.txt"
+tuda_corpus_path="../tuda"
+voxforge_corpus_path="../voxforge_de"
+text_corpus_path="../text_corpora/German_sentences_8mil_filtered_maryfied.txt"
 
-exp_path="/cluster/data/project_kws/exp/deepspeech_german"
+exp_path="../deepspeech-german.output"
 
-kenlm_bin="/cluster/data/project_kws/tools/kenlm/build/bin"
-deepspeech="/cluster/home/buec/kws/code/DeepSpeech"
+kenlm_bin="../kenlm_bin/kenlm/build/bin"
+deepspeech="../deepspeech"
 
 # Create LM
 ./prepare_text.py $text_corpus_path $exp_path/cleaned_vocab.txt
@@ -25,3 +25,4 @@ $deepspeech/native_client/generate_trie data/alphabet.txt $exp_path/lm.binary $e
 
 # Train
 ./run_training.sh $deepspeech $(realpath data/alphabet.txt) $exp_path
+

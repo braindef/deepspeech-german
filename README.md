@@ -40,6 +40,8 @@ from pingu.corpus import io
 dl = io.VoxforgeDownloader(lang='de')
 dl.download(voxforge_corpus_path)
 ```
+das will irgendwie nicht funktionieren, ich habs von http://www.voxforge.org/de/downloads runtergeladen und ins verzeichnis getan
+
 
 ### Build LM 
 ```

@@ -1,0 +1,15 @@
+ 2214  mkdir deepspeech
+ 2215  cd deepspeech/
+ 2217  git clone https://github.com/ynop/deepspeech-german
+ 2296  cp voxforge-de-r20140216.tgz voxforge_de/
+ 2317  git clone https://github.com/kpu/kenlm
+ 2323  sudo apt-get install cmake
+ 2353  sudo apt-get install cmake-curses-gui 
+ 2354  ccmake ..
+sudo apt-get install zlib1g-dev
+sudo apt-get build-dep libbz2-dev
+sudo apt-get install cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev
+
+git clone https://github.com/mozilla/DeepSpeech
+chromium https://github.com/mozilla/DeepSpeech/tree/master/native_client
+
